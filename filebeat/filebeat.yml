@@ -1,0 +1,32 @@
+filebeat.inputs:
+  - type: filestream
+    enabled: true
+    id: nginx-access
+    paths:
+      - /var/log/nginx/access.log
+    fields:
+      type: nginx-access
+      source: nginx
+    fields_under_root: true
+    seek_to_end: true
+
+  - type: filestream
+    enabled: true
+    id: nginx-error
+    paths:
+      - /var/log/nginx/error.log
+    fields:
+      type: nginx-error
+      source: nginx
+    fields_under_root: true
+    seek_to_end: true
+
+output.logstash:
+  hosts: ["logstash:5044"]
+  enabled: true
+
+monitoring:
+  enabled: false
+
+logging.json: true
+logging.metrics.enabled: false
