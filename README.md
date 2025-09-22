@@ -23,4 +23,4 @@ docker run -d --name=filebeat \
 ####  Проверка Dashboards
 <img width="2880" height="1704" alt="image" src="https://github.com/user-attachments/assets/7a3fcd52-1a70-4de2-8366-dcbb58f47d48" />
 
-<span style="color: blue;">Этот текст будет синим</span>
+
